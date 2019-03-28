@@ -15,11 +15,12 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @author wangping
  * @EnableSwagger2 注解开启 swagger2 功能
  * @Configuration 注解标示, 这是一个配置类,@Configuation注解包含了@Component注解
  * 可以不用在使用@Component注解标记这是个bean了
  * swagger2配置文件
+ *
+ * @author wangping
  */
 @EnableSwagger2
 @Configuration

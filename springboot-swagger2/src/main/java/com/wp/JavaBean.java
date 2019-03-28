@@ -4,9 +4,19 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+/**
+ * javabean
+ * @author wangping
+ */
 @Data
 @ApiModel(description = "JavaBean")
 public class JavaBean {
+
+    public JavaBean(String name, Integer age, String gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
 
     @ApiModelProperty(value = "用户名",name = "name",required = true)
     private String name;
@@ -17,9 +27,5 @@ public class JavaBean {
     @ApiModelProperty(value = "性别",name = "gender",required = true)
     private String gender;
 
-    public JavaBean(String name, Integer age, String gender) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-    }
+
 }
