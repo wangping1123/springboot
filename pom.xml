@@ -5,6 +5,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>springboot-swagger2</module>
+        <module>springboot-jpa</module>
+        <module>springboot-aop</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
