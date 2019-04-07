@@ -1,0 +1,20 @@
+spring:
+  # 数据源设置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.98.228.6:3306/test?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: 1123
+    type: com.alibaba.druid.pool.DruidDataSource
+  # jpa配置
+  jpa:
+    # 在 SrpingBoot 2.0 版本中，Hibernate 创建数据表的时候，默认的数据库存储引擎选择的是 MyISAM
+    #（之前好像是 InnoDB，这点比较诡异）。这个参数是在建表的时候，将默认的存储引擎切换为 InnoDB 用的。
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      # 第一次简表create  后面用update
+      #如果通过jpa在数据库中建表，将jpa.hibernate,ddl-auto改为create，建完表之后，要改为update,要不然每次重启工程会删除表并新建。
+      ddl-auto: update
+    # 配置在日志中打印出执行的 SQL 语句信息。
+    show-sql: true
+    database: mysql
