@@ -7,7 +7,7 @@ package com.wp.service;
  **/
 public interface Service {
 
-    void add();
+    void add(Long o);
 
     void del();
 
